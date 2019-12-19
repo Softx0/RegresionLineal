@@ -44,3 +44,22 @@ summary(multi.fit) # Observamos el modelo
 # p - value: puede ser tomado tambien como un valor de significancia, si es menor a 0.05 el modelo esta bien, pero
           # si es mayor a 0.05, su modelo no esta haciendo nada.
 
+
+
+layout(matrix(c(1,1,2,3),2,2,byrow=T))
+
+
+#Spend x Residuals Plot
+plot(simple.fit$resid~dataset$Spend[order(dataset$Spend)], main="Spend x Residuals\nfor Simple Regression",
+      xlab="Marketing Spend", ylab="Residuals")
+
+abline(h=0,lty=2)
+
+#Histogram of Residuals
+hist(simple.fit$resid, main="Histogram of Residuals", ylab="Residuals")
+
+#Q-Q Plot
+qqnorm(simple.fit$resid)
+qqline(simple.fit$resid)
+
+
