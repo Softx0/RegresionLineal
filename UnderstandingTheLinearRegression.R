@@ -31,20 +31,16 @@ summary(multi.fit) # Observamos el modelo
 
 
 
+# Pr(>|t|) 0.296 <- este es el nivel de significancia
 
+# Residual standard error: es la desviacion estandar de los residuos, mas pequeño, mucho mejor
 
+# Multiple R-squared: muestra la cantidad de varianza que existe explicada en el modelo
 
+# Adjusted R-squared: este toma peso cuando hay muchas mas variables, para la regresion multiple, pero hace lo mismo que el normal
 
+# F - statistic: es la prueba F, y verfica si el peso de al menos una variable es significativamente diferente de cero
 
-
-
-
-
-
-
-
-
-
-
-
+# p - value: puede ser tomado tambien como un valor de significancia, si es menor a 0.05 el modelo esta bien, pero
+          # si es mayor a 0.05, su modelo no esta haciendo nada.
 
