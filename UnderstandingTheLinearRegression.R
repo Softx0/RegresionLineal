@@ -28,17 +28,7 @@ summary(multi.fit) # Observamos el modelo
 ########## En otro sentido podemos observar que para ambos modelos, los resultados de la F-statistic, del Multiple E-square
 ########## del Adjusted R-squared  son muy similares, diciendonos, que son significativamente validos los modelos como lo indica
 ########## la referencia **, en los signif. codes.
-#
 
-
-
-
-
-
-
-
-
-##ESTOY REALIZANDO UN CAMBIO PARA GITKRAKEN
 
 
 
