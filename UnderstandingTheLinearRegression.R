@@ -30,7 +30,9 @@ summary(multi.fit) # Observamos el modelo
 ########## la referencia **, en los signif. codes.
 
 
+layout(matrix(c(1,1,2,3),2,2,byrow=T))
 
+<<<<<<< HEAD
 # Pr(>|t|) 0.296 <- este es el nivel de significancia
 
 # Residual standard error: es la desviacion estandar de los residuos, mas pequeño, mucho mejor
@@ -63,3 +65,17 @@ qqnorm(simple.fit$resid)
 qqline(simple.fit$resid)
 
 
+=======
+#Spend x Residuals Plot
+plot(simple.fit$resid~dataset$Spend[order(dataset$Spend)], main="Spend x Residuals\nfor Simple Regression",
+     xlab="Marketing Spend", ylab="Residuals")
+
+abline(h=0,lty=2)
+
+#Histogram of Residuals
+hist(simple.fit$resid, main="Histogram of Residuals", ylab="Residuals")
+
+#Q-Q Plot
+qqnorm(simple.fit$resid)
+qqline(simple.fit$resid)
+>>>>>>> develop
