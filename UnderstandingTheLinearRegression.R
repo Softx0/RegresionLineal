@@ -29,3 +29,18 @@ summary(multi.fit) # Observamos el modelo
 ########## del Adjusted R-squared  son muy similares, diciendonos, que son significativamente validos los modelos como lo indica
 ########## la referencia **, en los signif. codes.
 
+
+layout(matrix(c(1,1,2,3),2,2,byrow=T))
+
+#Spend x Residuals Plot
+plot(simple.fit$resid~dataset$Spend[order(dataset$Spend)], main="Spend x Residuals\nfor Simple Regression",
+     xlab="Marketing Spend", ylab="Residuals")
+
+abline(h=0,lty=2)
+
+#Histogram of Residuals
+hist(simple.fit$resid, main="Histogram of Residuals", ylab="Residuals")
+
+#Q-Q Plot
+qqnorm(simple.fit$resid)
+qqline(simple.fit$resid)
