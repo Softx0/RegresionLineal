@@ -29,22 +29,3 @@ summary(multi.fit) # Observamos el modelo
 ########## del Adjusted R-squared  son muy similares, diciendonos, que son significativamente validos los modelos como lo indica
 ########## la referencia **, en los signif. codes.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
