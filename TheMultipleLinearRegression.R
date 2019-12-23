@@ -6,9 +6,7 @@ Advertising
 plot(Advertising)
 ModelAdvertising <- lm(Sales ~ Radio + TV + Newspaper, data = Advertising)
 
-
 summary(ModelAdvertising)   
-
 
 # Residuals:
 #   Min      1Q  Median      3Q     Max 
@@ -26,7 +24,6 @@ summary(ModelAdvertising)
 # diferente, Eso es el Estimado
 
 # Que conviene mas entonces ? la radio conviene mas
-
 
 # Continuando con los coeficientes:
 #   El Error estandar, el valor de t y el valor de p
@@ -58,11 +55,10 @@ summary(ModelAdvertising)
 # F- statistic debe ser mayor a 5, en este caso es muy bueno = 605.4
 # Como modificaria a mi modelo sacar el newspaper
 
-
 ModelAdvertising <- lm(Sales ~ Radio + TV, data = Advertising)
 summary(ModelAdvertising)
 
-
+plot(ModelAdvertising)
 
 
 
