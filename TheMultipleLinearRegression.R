@@ -51,9 +51,16 @@ summary(ModelAdvertising)
 # El Coeficiente de Determiancion (R-squared): mientras mas cerca de 1 este 
 # (que nunca va a ser asi).
 
+# El Estadistico F, este mide la significancia global del modelo.
+# Enlaza a la prueba de hipotesis, todos los beta son iguales a 0, o al menos hay 1 que no
+# con la F-statistic se logra identificar.
+
+# F- statistic debe ser mayor a 5, en este caso es muy bueno = 605.4
+# Como modificaria a mi modelo sacar el newspaper
 
 
-
+ModelAdvertising <- lm(Sales ~ Radio + TV, data = Advertising)
+summary(ModelAdvertising)
 
 
 
