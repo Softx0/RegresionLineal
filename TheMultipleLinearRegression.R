@@ -25,4 +25,38 @@ summary(ModelAdvertising)
 # Pero si Y estuviera en la magnitud de unidades vendidas ya seria 
 # diferente, Eso es el Estimado
 
+# Que conviene mas entonces ? la radio conviene mas
+
+
+# Continuando con los coeficientes:
+#   El Error estandar, el valor de t y el valor de p
+# 
+# Publicidad negativa seria, un caso donde haya error, 
+# de la desviacion standard 
+# Pues entonces si estuviera negativo alguna de las variables
+# no es significativo a tomarse en cuenta para el analisis
+
+# No aporta nada
+# 
+# Inlcuso podemos darnos cuenta mas rapido cuando, en los cod significativos
+# este, de las opciones de 3 asteriscos, 2, 1, un dot (.) y nulo, entonces el
+# newspaper es nulo
+
+
+# Ahora bien proxima seccion
+# 
+# Residual standar error: mientras se reduce mas el error, entonces es mas
+# preciso el modelo.
+
+# El Coeficiente de Determiancion (R-squared): mientras mas cerca de 1 este 
+# (que nunca va a ser asi).
+
+
+
+
+
+
+
+
+
 
