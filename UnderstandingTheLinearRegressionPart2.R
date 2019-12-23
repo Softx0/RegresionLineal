@@ -157,10 +157,23 @@ lines(nuevas.edades$edad, ip[, 3], lty = 2, col = "red")
 #Otros analisis para valores numericos
 
 #Outliers -- QQ -- Plots
+#Buscando valores atipicos,
+install.packages("car")
 library(carData)
-library(car)
 outlierTest(regresion) #Outlier-BonferonnieTest
+influenceIndexPlot(regresion, id.n = 3)
+influencePlot(regresion, id.n = 3)
+
+qqplot(regresion)
+
+ncvTest(regresion)
+
+<<<<<<< HEAD
+=======
+#Si las varianzas de las perturbacion eson constantes a lo largo de las observaciones
 
 
 
+
+>>>>>>> develop
 
