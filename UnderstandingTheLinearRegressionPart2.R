@@ -55,9 +55,6 @@ abline(regresion)
 
 
 
-
-
-
 #Los supuestos del del modelo
 par(mfrow = c(2,2)) #mf row y el vector 2,2 nos pone los graficos en 2 columnas y 2 filas
 plot(lm(grasas ~ edad, data = grasas))
@@ -129,7 +126,6 @@ confint(regresion, level = 0.99)
 
 #El LEVEL ES ALFA EL RATIO DE APRENDIZAJE
 
-
 #Graficamos
 plot(grasas$edad, grasas$grasas, xlab = "Edad", ylab = "Grasa Corporal")
 abline(regresion)
@@ -164,19 +160,6 @@ lines(nuevas.edades$edad, ip[, 3], lty = 2, col = "red")
 library(carData)
 library(car)
 outlierTest(regresion) #Outlier-BonferonnieTest
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
