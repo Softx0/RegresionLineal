@@ -1,5 +1,4 @@
 
-
 Advertising <- read.csv("/Users/Mac/Desktop/UNIVERSIDAD/Autodidacta/AlgoritmosAvanzados/RegresionLineal/Resources/advertising.csv")
 Advertising
 
@@ -39,7 +38,6 @@ summary(ModelAdvertising)
 # este, de las opciones de 3 asteriscos, 2, 1, un dot (.) y nulo, entonces el
 # newspaper es nulo
 
-
 # Ahora bien proxima seccion
 # 
 # Residual standar error: mientras se reduce mas el error, entonces es mas
@@ -59,7 +57,3 @@ ModelAdvertising <- lm(Sales ~ Radio + TV, data = Advertising)
 summary(ModelAdvertising)
 
 plot(ModelAdvertising)
-
-
-
-
