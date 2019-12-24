@@ -54,10 +54,6 @@ abline(regresion)
 #Se nota una correlacion positiva, pero hay un 30% que no esta siendo explicado por este modelo, por el 70% del R^2 
 
 
-
-
-
-
 #Los supuestos del del modelo
 par(mfrow = c(2,2)) #mf row y el vector 2,2 nos pone los graficos en 2 columnas y 2 filas
 plot(lm(grasas ~ edad, data = grasas))
@@ -81,15 +77,7 @@ plot(lm(grasas ~ edad, data = grasas))
 #Esos datos son influyentes en el resultado de la ecuacion de prediccion.
 
 
-
-
-
-
 ####################################################################
-
-
-
-
 
 
 #La ecuacion que se nos genera en el modelo, sabemos que se usa para predecir
@@ -173,6 +161,7 @@ qqplot(regresion)
 ncvTest(regresion)
 
 #Si las varianzas de las perturbacion eson constantes a lo largo de las observaciones
+
 
 
 

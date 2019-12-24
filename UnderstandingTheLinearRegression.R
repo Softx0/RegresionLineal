@@ -44,3 +44,6 @@ hist(simple.fit$resid, main="Histogram of Residuals", ylab="Residuals")
 #Q-Q Plot
 qqnorm(simple.fit$resid)
 qqline(simple.fit$resid)
+
+
+
