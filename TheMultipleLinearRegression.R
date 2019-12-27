@@ -57,3 +57,37 @@ ModelAdvertising <- lm(Sales ~ Radio + TV, data = Advertising)
 summary(ModelAdvertising)
 
 plot(ModelAdvertising)
+
+
+
+
+
+
+
+
+
+#####################################################################################################################################################################
+
+
+
+
+
+
+#Ejemplo practico #2
+
+attach(BD_casas) #Accede a las variables de la BD
+
+BD_casas
+pairs(BD_casas [, 3:6]) #Selecciona las variables
+
+options(scipen = 999) #Quita la notacion cientifica | muy util
+
+
+
+
+
+
+
+
+
+
