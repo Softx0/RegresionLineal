@@ -74,13 +74,38 @@ plot(ModelAdvertising)
 
 
 #Ejemplo practico #2
+#Lo que vamos a hacer es, intentar predecir el precio, segun el no. de baños, habitaciones y metros cuadrados.
 
 attach(BD_casas) #Accede a las variables de la BD
-
 BD_casas
-pairs(BD_casas [, 3:6]) #Selecciona las variables
-
+pairs(BD_casas [, 3:6]) #Selecciona las variables (acotamos)
 options(scipen = 999) #Quita la notacion cientifica | muy util
+
+
+#Relacion entre las variables
+
+#Matriz de correlacion entre tamaño y precio
+cor(sqft_living, price)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
