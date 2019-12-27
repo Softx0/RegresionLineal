@@ -57,3 +57,74 @@ ModelAdvertising <- lm(Sales ~ Radio + TV, data = Advertising)
 summary(ModelAdvertising)
 
 plot(ModelAdvertising)
+
+
+
+
+
+
+
+
+
+#####################################################################################################################################################################
+
+
+
+
+
+
+#Ejemplo practico #2
+#Lo que vamos a hacer es, intentar predecir el precio, segun el no. de baños, habitaciones y metros cuadrados.
+
+attach(BD_casas) #Accede a las variables de la BD
+BD_casas
+pairs(BD_casas [, 3:6]) #Selecciona las variables (acotamos)
+options(scipen = 999) #Quita la notacion cientifica | muy util
+
+
+#Relacion entre las variables
+#Matriz de correlacion entre tamaño y precio
+cor(sqft_living, price)
+
+#Covarianza entre precio y tamaño
+cov(sqft_living, price)
+
+#El test de correlacion de Pearson
+cor.test(price, sqft_living)
+cor.test(price, bathrooms)
+cor.test(price, bedrooms)
+
+# Nos da el valor de t
+# El valor de significancia
+# El valor de verdad de la hipotesis
+# y la correlacion tambien
+
+
+
+####                        ### 
+###### CREACION DEL MODELO  ######
+####                        ###
+
+
+
+RM <- lm(price ~ bedrooms + bathrooms + sqft_living)
+summary(RM)
+plot(RM)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
