@@ -90,9 +90,9 @@ cor(sqft_living, price)
 cov(sqft_living, price)
 
 #El test de correlacion de Pearson
-cor.test(price, sqft_living)
-cor.test(price, bathrooms)
-cor.test(price, bedrooms)
+cor.test(price, sqft_living) #Nos arroja un 70% de relacion entre estas variables
+cor.test(price, bathrooms) #Un poco menos un 52%
+cor.test(price, bedrooms) #Aqui ya es un poco bajo pero aun se puede tomar en cuenta, un 30%
 
 # Nos da el valor de t
 # El valor de significancia
@@ -109,13 +109,64 @@ cor.test(price, bedrooms)
 
 RM <- lm(price ~ bedrooms + bathrooms + sqft_living)
 summary(RM)
+
+# Entrando con contexto con el summary
+# seccion de estimaciones, nos dice que los precios van a partir de 74,847, siendo este eje y de precio
+# en la unidad de monedas.
+# entonces teniendo a los baños, habs y mts cuadrados como factores para ser multiplicados estos,
+# por la cantidad que tenga.
+# 
+# podemos observar que las habitaciones es de valor negativo, es decir si aumenta el no. de hab disminuye
+# el precio O.o, extraño pero eso dice la data.
+
+# En los valores de significacia como sabemos, mientras mas * tenga, mas relevante sera
+# 
+# El Coefiiciente de determinacion R^2, es del 50%, y el ajustado con un 50% por igual
+# F-statistics, hace referencia a la anova, y que nos dice si el modelo explica mas de lo que no esta alli
+# y tiene un buen valor.
+# 
+# y el valor de p, o coeficiente de significancia, que si es menor a 0.05 es bueno, este por lo tanto
+# es excelente.
+
+
 plot(RM)
 
+# El primero es sobre la homocedasticidad de las varianzas
+# residuos en y y valores en x, en la linea punteada esta el 0
+# si es homogeneo, significa que los puntos por arriba de la linea
+# y los que estan por debajo se podrian eliminar.
+# 
+# Hay valores atipicos, si aumenta el precio de lacasa aumenta el errorC
+# Nuestro modelo no tiene homocedasticidad :/
+#   
+# En la proxima, es osbre la normal distribution, y pues esta
+# dice que si los datos se mantienen enla linea punteada, seria
+# una distribucion normal, pero cuando llega aprox. a 2, sube 
+# repetinamente.
 
+# otra forma de ver la distribucion normal del modelo es:
 
+residuos <- residuals(RM)
+hist(residuos) # como la mayoria se conservan con valores cercanos
+# al cero, pues podemos decir que si tiene una dn
 
+plot(residuos, bathrooms)
 
+install.packages("lmtest")
+library(lmtest)
+require(lmtest)
 
+#Durbin-Watson test
+dwtest(RM)
+# Si nuestro modelo esta entre 1.5 a 2.5 no hay problemas de
+# autocorrelacion
+
+#Coliniealidad, independencia entre las variables
+#Que no esten linealmente independientes
+
+install.packages("car")
+library(car)
+VIF (RM)
 
 
 
